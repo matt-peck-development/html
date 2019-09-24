@@ -391,3 +391,74 @@ footer img {
   border-radius: 3px;
   margin-right: 20px;
 }
+
+@media screen and (max-width: 1300px) {
+  .core-values-container {
+    padding: 0 50px;
+  }
+  .core-values-container article {
+    margin: 0 30px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .testimonials .testimonial-card {
+    margin: 0 50px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .core-values-container {
+    flex-direction: column;
+    padding: 0 18%;
+  }
+
+  .core-values-container article {
+    margin-bottom: 25px;
+  }
+
+  .testimonials .testimonial-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonials .testimonial-card {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  nav ul li a {
+    font-size: 1.1rem;
+  }
+
+  nav ul li .btn-action {
+    font-size: 1.1rem;
+  }
+
+  .masthead img {
+    width: 300px;
+  }
+  .masthead .header {
+    font-size: 1.6rem;
+    margin: 0 110px;
+    margin-bottom: 25px;
+  }
+
+  .masthead .call-to-action-container {
+    flex-direction: column;
+    padding: 0px 150px;
+  }
+
+  .btn-action {
+    margin-bottom: 15px;
+  }
+
+  .masthead-plate, section.pitch, section.core-values .section-segway {
+    display: none;
+  }
+
+  footer {
+    padding: 0 60px;
+  }
+}
