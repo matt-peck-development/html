@@ -171,6 +171,7 @@ section.pitch article.pitch-text {
   align-items: center;
   margin-bottom: 100px;
 }
+
 h3 {
   font-size: 1.6rem;
   margin: 0;
@@ -178,6 +179,7 @@ h3 {
   font-weight: 500;
   color: #3B3B3B;
 }
+
 .pitch-text .subtext {
   font-size: 1.2rem;
   padding-left: 125px;
@@ -204,7 +206,9 @@ section.core-values {
   padding-top: 40px;
   padding-bottom: 125px;
   background-color: #C9C9C9;
+  /* background: transparent url('./assets/vintage_speckles.png') 0% 0% repeat padding-box; */
 }
+
 section.core-values:before {
   background: inherit;
   top: -21px;
@@ -261,8 +265,8 @@ section.testimonials {
   z-index: 1;
   padding-top: 20px;
   padding-bottom: 125px;
-  background-color: #C9C9C9;
   background-color: #E4E4E4;
+  /* background: transparent url('./assets/vintage_speckles.png') 0% 0% repeat padding-box; */
 }
 section.testimonials:before {
   background: inherit;
