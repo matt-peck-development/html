@@ -27,7 +27,6 @@ header {
 header nav {
   height: 100%;
   width: 100%;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +35,6 @@ header nav {
 nav ul {
   height: 100%;
   padding: 0;
-  margin: 0 auto;
 }
 
 nav ul li {
@@ -428,19 +426,22 @@ footer img {
 }
 
 @media screen and (max-width: 750px) {
+  html, body {
+    font-size: 14px;
+  }
   nav ul li a {
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
   }
 
   nav ul li .btn-action {
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
   }
 
   .masthead img {
     width: 300px;
   }
   .masthead .header {
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
     margin: 0 110px;
     margin-bottom: 25px;
   }
@@ -460,5 +461,38 @@ footer img {
 
   footer {
     padding: 0 60px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  html, body {
+    font-size: 13px;
+  }
+
+  nav ul li {
+    margin: 0 5px;
+  }
+
+  h2 {
+    /* font-size: 1.4rem; */
+  }
+
+  .masthead img {
+    width: 250px;
+  }
+
+  .masthead .header {
+    margin: 0 65px;
+    margin-bottom: 25px;
+  }
+
+  .masthead .call-to-action-container {
+    align-items: center;
+    padding: 0;
+  }
+
+  .testimonials .testimonial-card, .testimonials .testimonial-card:before {
+    width: 350px;
+    height: 350px;
   }
 }
