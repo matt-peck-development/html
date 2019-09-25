@@ -13,6 +13,7 @@
   <meta name="msapplication-TileColor" content="#f8f8f8">
   <meta name="theme-color" content="#f8f8f8">
   <link href="./style.css" rel="stylesheet" />
+  <link href="./get-quote.css" rel="stylesheet" />
   <title>Matt Peck Development</title>
 </head>
 
@@ -48,118 +49,34 @@
   </header>
 
   <div class="masthead">
-    <div class="masthead-content">
-      <h1 class="header">Get Quote</h1>
+    <div class="header-container">
+      <img src="./assets/logo.png" alt="logo" />
+      <h1 class="header">// Get Quote</h1>
+    </div>
+    <div class="form-container">
+      <p>We’d love to hear from you.<br />
+      Request a quote or drop us a line here.</p>
+
+      <form name="MPD - Get Quote" action="/get-quote-success.html" method="POST" data-netlify="true">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="55" rows="15" required></textarea>
+        <input type="submit" value="SEND">
+      </form>
     </div>
   </div>
 
   <section class="testimonials">
-    <h2>What others are saying about MPD</h2>
-    <div class="testimonial-cards-container">
-      <div class="testimonial-card">
-        <!-- Matt has been a pleasure to work with. He snapped right into our culture with his transparent and collaborative
-        approach. He has been a great addition to our team -->
-        <blockquote>Matt gets the design and development relationship that makes for the best product output. He also
-          has a natural sense of leadership and can step up when needed or dig into the details.</blockquote>
-        <cite>
-          <img src="./assets/masheen-logo.png" alt="masheen">
-          <div class="citation">
-            <strong>- Bill & Andrea Moschella</strong>
-            <br><span class="company">Masheen</span>
-          </div>
-
-        </cite>
-      </div>
-      <div class="testimonial-card">
-        <blockquote>MPD did a great job giving us a new website that looks clean and modern. They responded to every
-          request quickly and
-          created exactly what we wanted.</blockquote>
-        <cite>
-          <img src="./assets/nsbc-logo.png" alt="masheen">
-          <div class="citation">
-            <strong>- Darren King</strong>
-            <br><span class="company">North Stafford Baptist Church</span>
-          </div>
-
-        </cite>
-      </div>
-    </div>
   </section>
 
   <footer>
     <img src="./assets/logo.png" alt="logo" />
     <span>© 2019 Matt Peck Development, LLC. All rights reserved.</span>
-  </footer>
-</body>
-
-</html>
-
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li>
-          <a class="active" href="">home</a>
-        </li>
-        <li>
-          <a>about</a>
-        </li>
-        <li>
-          <a>portfolio</a>
-        </li>
-        <li class="is-button">
-          <a>
-            <div class="btn-action btn-primary">get quote</div>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="masthead">
-    <div class="masthead-content">
-      <img src="./assets/logo.png" alt="logo" />
-      <h1 class="header">we design and build great looking websites</h1>
-      <div class="call-to-action-container">
-        <div class="btn-action btn-primary">get quote</div>
-        <div class="btn-action btn-info">see our work</div>
-      </div>
-    </div>
-  </div>
-
-  <hr class="masthead-plate" />
-
-  <section class="form">
-    <form name="quote" action="/get-quote-success" method="POST" data-netlify="true">
-      <input type="text" name="name" placeholder="Full Name" />
-      <input type="email" name="email" placeholder="Email Address" />
-      <textarea name="message" id="" cols="30" rows="10"></textarea>
-      <input type="submit" value="Submit">
-    </form>
-
-  </section>
-
-  <footer>
-    <!-- <img src="./logo_light.png" alt="logo" /> -->
-    <img class="test" src="./assets/logo.png" alt="logo" />
-    <nav>
-      <ul>
-        <li>
-          <a class="active">home</a>
-        </li>
-        <li>
-          <a>about</a>
-        </li>
-        <li>
-          <a>portfolio</a>
-        </li>
-        <li class="is-button">
-          <a>
-            <div class="btn-action btn-primary">get quote</div>
-          </a>
-        </li>
-      </ul>
-    </nav>
   </footer>
 </body>
 
