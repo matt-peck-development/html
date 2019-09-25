@@ -37,8 +37,11 @@
   font-size: 1.1rem;
 }
 
-.masthead .form-container form {
-
+.masthead .form-container form p.hidden {
+  visibility: hidden;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .masthead .form-container form input,
