@@ -1,0 +1,173 @@
+.page-header {
+  display: block;
+  position: relative;
+  z-index: 5;
+  padding-top: 100px;
+  padding-left: 100px;
+  margin-bottom: 40px;
+}
+
+.page-header .header-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.page-header img {
+  display: block;
+  margin: 0;
+  width: 225px;
+  margin-right: 25px;
+}
+
+.page-header .header-container .header {
+  color: #3b3b3b;
+  margin-bottom: 0;
+}
+
+.page-header .page-description {
+  display: flex;
+  justify-content: center;
+  padding-right: 100px;
+}
+
+.page-header .page-description p {
+  text-align: center;
+  width: 55%;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+h2 {
+  margin-bottom: 50px;
+}
+
+section.team {
+  display: flex;
+  justify-content: center;
+  width: 55%;
+  margin: 0 auto;
+  margin-bottom: 150px;
+}
+
+section.team .team-member-card:first-child {
+  margin-right: 100px;
+}
+
+section.team .team-member-card img {
+  display: block;
+  margin: 0 auto;
+  width: 225px;
+  margin-bottom: 25px;
+}
+
+section.team .team-member-card h3.name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+}
+
+section.team .team-member-card h4.role {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+/* section.team .team-member-card .social-media {
+  border: 2px solid skyblue;
+  text-align: center;
+} */
+
+section.team .team-member-card .name-plate {
+  background-color: #707070;
+  height: 2px;
+  margin: 0 auto;
+}
+
+section.team .team-member-card p.description {
+  padding-left: 8px;
+}
+
+
+@media screen and (max-width: 1300px) {
+
+}
+
+@media screen and (max-width: 1150px) {
+  .page-header .page-description p {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .page-header {
+    padding-top: 85px;
+    padding-left: 50px;
+  }
+
+  .page-header .page-description {
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .page-header {
+    padding-left: 0px;
+  }
+
+  .page-header img {
+    margin-right: 0px;
+  }
+
+  .page-header .header-container {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .page-header .header-container .header {
+    display: none;
+  }
+
+  .page-header .page-description {
+    padding-right: 0px;
+  }
+
+  section.team {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h2 {
+    margin-bottom: 35px;
+    font-size: 1.6rem;
+  }
+
+  section.team {
+    flex-direction: column;
+  }
+
+  section.team .team-member-card {
+    margin-bottom: 50px;
+  }
+
+  section.team .team-member-card:first-child {
+    margin-right: 0px;
+  }
+
+  section.team .team-member-card h3.name {
+    font-size: 1.4rem;
+  }
+
+  section.team .team-member-card h4.role {
+    font-size: 1.3rem;
+  }
+
+  section.team .team-member-card p.description {
+    font-size: 1.2rem;
+  }
+}
