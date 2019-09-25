@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Success</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+  <link rel="manifest" href="./assets/site.webmanifest">
+  <link rel="mask-icon" href="./assets/safari-pinned-tab.svg" color="#f8f8f8">
+  <meta name="msapplication-TileColor" content="#f8f8f8">
+  <meta name="theme-color" content="#f8f8f8">
+  <link href="./style.css" rel="stylesheet" />
+  <link href="./get-quote.css" rel="stylesheet" />
+  <title>Matt Peck Development</title>
 </head>
+
 <body>
-  Thank you for submitting the form!
+
+  <header>
+    <input type="checkbox" id="toggle">
+    <nav>
+      <ul>
+        <li>
+          <a href="/index.html">home</a>
+        </li>
+        <li>
+          <a href="/about.html">about</a>
+        </li>
+        <li>
+          <a href="/portfolio.html">portfolio</a>
+        </li>
+        <li>
+          <a class="active is-button" href="/get-quote.html">
+            <div class="btn-action btn-primary">get quote</div>
+          </a>
+        </li>
+        <li>
+          <label for="toggle">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAAAXNSR0IArs4c6QAABBdJREFUWAnFmFFSGkEQhgGxUF/APFilVkpygnADNycIOYF4gJR4gmxOADlByAlcTxA8gfqcF6yUWuWDwItioZD/W2eoFZbNorJ21dA9vTPd/3T3DLObTj2DLi8vi8Ph8LOmlpkuuZBOp0tGPpHcQRZ5kg/X19dbfm+Gn3Tcse12u9Dr9fYEoqI5xbjzzLiWADaWlpZ+rK6uWtCRJmIBU4R2BoNBXcYLxlpXnGg0xVsLCwudtbW1E55dXV2VHh4eGEdUHfGyWl6NyHYymUxVEfxFP4oigZEyAToQgJIxciTZleFmlNHxZ7LjCJQr/TbPJJ8I4JeoFE8Fxsr7/f5vAWH1Z+KVWQEBIkgXFxdEr662RfQWFxc/2UgHxyGHAtMKK5r40ww+XF5ersStjXEH431q9fb2tiE9myelBe9qwfSjiUhpZUPTWN1cSPbr1g8+I51QU+fn5+15g7IgLDh84tvqJ7gGHBtQ3sTDOSnkz8MnvoMuMrZDXSnfhPSMmrL6eXPji81VAoP15wOjIHUs1FBqwKsVunUSxc2mqjIGDGBB9oHd3NxUBQjF0UuPBIzOShsbG57mHIEBLMzP8iPFjuEuPEj77t93d7m7d0HdS+XcXe665r6/HrNTV3/bYHGz7AadWUUpu2HR6ud6XzPDlKvnr0ay6crY96BBoqZNwF9dEUxZgSqbAYRzkgZprWz4Z/LBCzRDbIYSGHZ8TELZZLsGd0TolASUYACLmjc6LuS3lYDv/7mwGAqkMq+CY4JVIo8oweJPcX26v7/n9pHPClQJFCr81ghNQEiq+HHJTUNp5JQo+cdFAMekmGzxj/ynhbCl3pZQfpgWtdHoOQvcMpTKY6XylOJvGX9Fw9+MmSs5qewEUxkKLMniV0QsBh8Yh9q2wueIN9SeUJLFbzDgv8mu9KSoqflX3Seo6CRY/GAQHlL5+C/EBlDj9HcmgCWkkP8yGMCCS//kF9IGHfFv8DeiPfxaLD6wlZWVunT8szsgZ0CSZHw68tk1WB4jxi1Sea0aMKNbZBLgzI3V3p6roa+JeiHgL4E8HyQBCh/4wie+gz6Dt4uUXttJIymlEOvBgfOQjQ/fp/E93c3YC68f4umjn/9EoGpEihb2wuvfd8bNc2HT7rCfCDy9Yu2G5n58Yow+NaVPBNgmUpxZoZ8IQoExwfyhNiXm1Vpq++ZtRuLzSNEBDFkoqnWz2awz00cVTfJJkeMzFN/BPhpVU5Gsb25uHpp+LKbC5kSvarDDBNk4paaibjNTI4YBSya1dfWJHoY7Yp6MN8X5cNe1KyfSuiUwjkU54mWBKohDXQAKUMPvRfzEAsZ8asO8GFfU3UI3A51pMQ0Oz7i1GhtYEAQplqOydI5aQXLBplvyqWQiSmtK9qJSpjGh9A9B+2T7TdAtoAAAAABJRU5ErkJggg=="
+              alt="">
+          </label>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="masthead">
+    <div class="header-container">
+      <img src="./assets/logo.png" alt="logo" />
+      <h1 class="header">// Get Quote</h1>
+    </div>
+    <div class="form-success-container">
+      <p>Thanks for reaching out, we'll be in touch soon!</p>
+    </div>
+  </div>
+
+  <section class="testimonials">
+  </section>
+
+  <footer>
+    <img src="./assets/logo.png" alt="logo" />
+    <span>© 2019 Matt Peck Development, LLC. All rights reserved.</span>
+  </footer>
 </body>
+
 </html>

@@ -24,11 +24,22 @@
   margin-bottom: 0;
 }
 
-.masthead .form-container {
+.masthead .form-container, .masthead .form-success-container {
   display: flex;
   justify-content: center;
   padding-right: 200px;
   margin-bottom: -150px;
+}
+
+.masthead .form-success-container {
+  min-height: 500px;
+  padding-right: 100px;
+}
+
+.masthead .form-success-container p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.7rem;
 }
 
 .masthead .form-container p {
@@ -87,9 +98,6 @@
 }
 
 
-
-
-
 section.testimonials {
   height: 300px;
 }
@@ -108,9 +116,13 @@ section.testimonials {
     padding-left: 50px;
   }
 
-  .maasthead .form-container {
+  .masthead .form-container {
     padding-right: 100px;
     margin-bottom: -185px;
+  }
+
+  .masthead .form-success-container {
+    padding-right: 0px;
   }
 }
 
@@ -134,12 +146,17 @@ section.testimonials {
     padding-right: 0px;
   }
 
+  .masthead .form-success-container {}
 
   .masthead .form-container p {
     text-align: center;
     margin-right: 0px;
     margin-bottom: 20px;
     font-size: 1.3rem;
+  }
+
+  .masthead .form-success-container p {
+    padding: 0 30px;
   }
 }
 
