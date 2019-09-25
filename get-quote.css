@@ -76,6 +76,7 @@
   line-height: 40px;
   background-color: #6C86DB;
   color: #EBEBEB;
+  cursor: pointer;
 }
 
 .masthead .form-container form label {
