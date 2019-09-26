@@ -1,0 +1,20 @@
+{
+  "name": "matt-peck-development",
+  "version": "1.0.0",
+  "description": "Company Website",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel": "^1.12.3"
+  },
+  "scripts": {
+    "start": "parcel index.html --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-matt-peck-development:matt-peck-development/matt-peck-development.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

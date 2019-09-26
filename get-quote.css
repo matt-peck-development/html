@@ -1,0 +1,165 @@
+
+.masthead {
+  display: block;
+  position: relative;
+  z-index: 5;
+  padding-top: 100px;
+  padding-left: 100px;
+}
+
+.masthead .header-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.masthead img {
+  display: block;
+  margin: 0;
+  width: 225px;
+  margin-right: 25px;
+}
+
+.masthead .header-container .header {
+  margin-bottom: 0;
+}
+
+.masthead .form-container, .masthead .form-success-container {
+  display: flex;
+  justify-content: center;
+  padding-right: 200px;
+  margin-bottom: -150px;
+}
+
+.masthead .form-success-container {
+  min-height: 500px;
+  padding-right: 100px;
+}
+
+.masthead .form-success-container p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+
+.masthead .form-container p {
+  margin-right: 50px;
+  text-align: right;
+  font-size: 1.1rem;
+}
+
+.masthead .form-container form .hidden {
+  visibility: hidden;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.masthead .form-container form input,
+.masthead .form-container form textarea {
+  display: block;
+  margin-bottom: 15px;
+  font-family: 'Avenir', sans-serif;
+  font-size: 1rem;
+  padding: 2px;
+  padding-left: 8px;
+  border: 1px solid rgba(115, 115, 115, .25);
+  border-radius: 1px;
+  outline-color: #6d86db;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, .16);
+}
+
+.masthead .form-container form input {
+  height: 35px;
+  width: 350px;
+}
+
+.masthead .form-container form textarea {
+  width: 100%;
+  padding: 8px;
+}
+
+.masthead .form-container form input[type="submit"] {
+  margin: 0 auto;
+  margin-top: 40px;
+  height: 40px;
+  width: 100px;
+  padding: 0;
+  line-height: 40px;
+  background-color: #6C86DB;
+  color: #EBEBEB;
+  cursor: pointer;
+}
+
+.masthead .form-container form label {
+  font-weight: bold;
+  color: #3B3B3B;
+  font-size: .8rem;
+}
+
+
+section.testimonials {
+  height: 300px;
+}
+
+@media screen and (max-width: 1300px) {
+
+}
+
+@media screen and (max-width: 1150px) {
+
+}
+
+@media screen and (max-width: 1050px) {
+  .masthead {
+    padding-top: 85px;
+    padding-left: 50px;
+  }
+
+  .masthead .form-container {
+    padding-right: 100px;
+    margin-bottom: -185px;
+  }
+
+  .masthead .form-success-container {
+    padding-right: 0px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .masthead {
+    padding-left: 0px;
+  }
+
+  .masthead .header-container {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .masthead .header-container .header {
+    display: none;
+  }
+
+  .masthead .form-container {
+    flex-direction: column;
+    align-items: center;
+    padding-right: 0px;
+  }
+
+  .masthead .form-success-container {}
+
+  .masthead .form-container p {
+    text-align: center;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+
+  .masthead .form-success-container p {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+}
