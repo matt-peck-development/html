@@ -217,7 +217,10 @@ section.logos:before {
 
 .logos-container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
   align-items: center;
   margin: 0 auto;
   padding: 0 25px;
@@ -226,6 +229,7 @@ section.logos:before {
 .logos-container img {
   display: block;
   width: 350px;
+  margin-bottom: 35px;
 }
 
 
@@ -237,12 +241,13 @@ section.logos:before {
   .modal {
     flex: 0 1 80%;
   }
-  /* .modal #modal-img {
-    width: 80%;
-  } */
 
   .page-header .page-description p {
     width: 70%;
+  }
+
+  .page-header .page-description {
+    padding-right: 50px;
   }
 }
 
@@ -250,10 +255,6 @@ section.logos:before {
   .page-header {
     padding-top: 85px;
     padding-left: 50px;
-  }
-
-  .page-header .page-description {
-    padding-right: 50px;
   }
 }
 

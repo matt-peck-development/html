@@ -17,6 +17,7 @@ const nextBtn = document.querySelector(".modal-next");
 
 let currentPictureIndex = 0;
 let selectedCardId = "";
+const filterNodes = ['header', '.page-header', 'section.websites', 'section.logos', 'footer'];
 
 const websitePics = {
   mpd: [mpdImgOne, mpdImgTwo, mpdImgThree],
@@ -25,6 +26,9 @@ const websitePics = {
 };
 
 const closeModal = () => {
+  filterNodes.forEach(s => {
+    document.querySelector(s).style.filter = "blur(0px)";
+  });
   document.body.scroll = "yes";
   document.body.style.overflow = "scroll";
   modalContainer.style.display = "none";
@@ -42,6 +46,10 @@ const openModal = () => {
   overlay.style.display = "block";
   document.body.scroll = "no";
   document.body.style.overflow = "hidden";
+  filterNodes.forEach(s => {
+    document.querySelector(s).style.filter = "blur(3px)";
+  });
+
 };
 
 const updateControlVisibility = () => {
