@@ -1,7 +1,7 @@
 .page-header {
   display: block;
   position: relative;
-  z-index: 5;
+  z-index: 1;
   padding-top: 100px;
   padding-left: 100px;
 }
@@ -37,6 +37,70 @@
   line-height: 1.6;
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+}
+
+.modal {
+  position: relative;
+  z-index: 200;
+  flex: 0 1 55%;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.modal #modal-img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 2px;
+  margin-bottom: 50px;
+  display: inline-block;
+  user-select: none;
+  /* box-shadow: 3px 5px 7px rgba(0, 0, 0, .16); */
+}
+
+.modal .modal-close {
+  position: absolute;
+  top: -30px;
+  right: -35px;
+  cursor: pointer;
+}
+
+.modal .modal-prev {
+  position: fixed;
+  top: 45%;
+  margin-left: -71px;
+  cursor: pointer;
+}
+
+.modal .modal-next {
+  position: fixed;
+  top: 45%;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
 h2 {
   color: #6C86DB;
   font-size: 1.7rem;
@@ -56,13 +120,15 @@ section.websites h2 {
 
 section.websites .websites-cards-container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: flex-start;
   margin: 0 auto;
   padding: 0 25px;
 }
 section.websites .websites-cards-container .website-card-container {
   width: 450px;
+  margin-bottom: 35px;
 }
 section.websites .websites-cards-container .website-card-container h4 {
   margin-top: 35px;
@@ -70,13 +136,61 @@ section.websites .websites-cards-container .website-card-container h4 {
 }
 
 section.websites .website-card {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px;
   height: 400px;
   background-color: #E4E4E4;
   border-radius: 2px;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, .16);
 }
-section.websites .website-card {
+section.websites .website-card:hover > .website-card-overlay {
+  display: flex;
+}
+section.websites .website-card:not(:hover) > .website-card-overlay {
+  display: none;
+}
 
+section.websites .website-card > .website-card-overlay {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 50;
+  border-radius: 2px;
+  background-color: rgba(59, 59, 59, 0.5);
+  cursor: pointer;
+}
+
+section.websites .website-card > .website-card-overlay img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+section.websites .website-card > .website-card-overlay span {
+  color: #FFF;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+section.websites .website-card .img-container {
+  flex: 1 1 auto;
+  margin: 5px;
+  overflow: hidden;
+}
+
+section.websites .website-card img {
+  display: block;
+  width: 100%;
 }
 
 section.logos {
@@ -120,6 +234,13 @@ section.logos:before {
 }
 
 @media screen and (max-width: 1150px) {
+  .modal {
+    flex: 0 1 80%;
+  }
+  /* .modal #modal-img {
+    width: 80%;
+  } */
+
   .page-header .page-description p {
     width: 70%;
   }
@@ -158,12 +279,27 @@ section.logos:before {
     padding-right: 0px;
   }
 
+  .modal .modal-prev {
+    margin-left: -46px;
+  }
+
+  .modal .modal-next {
+    margin-left: 25px;
+  }
 }
 
 @media screen and (max-width: 600px) {
   h2 {
     margin-bottom: 35px;
     font-size: 1.6rem;
+  }
+
+  .modal .modal-prev {
+    margin-left: -36px;
+  }
+
+  .modal .modal-next {
+    margin-left: 15px;
   }
 
 }
