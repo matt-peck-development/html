@@ -97,6 +97,11 @@ header {
   top: 45%;
   margin-left: -71px;
   cursor: pointer;
+
+  -webkit-transform:translateZ(1px);
+  -moz-transform:translateZ(1px);
+  -o-transform:translateZ(1px);
+  transform:translateZ(1px);
 }
 
 .modal .modal-next {
@@ -104,6 +109,11 @@ header {
   top: 45%;
   margin-left: 50px;
   cursor: pointer;
+
+  -webkit-transform:translateZ(1px);
+  -moz-transform:translateZ(1px);
+  -o-transform:translateZ(1px);
+  transform:translateZ(1px);
 }
 
 h2 {
