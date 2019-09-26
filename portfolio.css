@@ -267,6 +267,7 @@ section.logos:before {
 @media screen and (max-width: 750px) {
   .page-header {
     padding-left: 0px;
+    margin-bottom: 25px;
   }
 
   .page-header img {
@@ -286,6 +287,10 @@ section.logos:before {
     padding-right: 0px;
   }
 
+  section.websites, section.logos {
+    padding: 0px 20px;
+  }
+
   .modal .modal-prev {
     margin-left: -46px;
   }
@@ -297,8 +302,33 @@ section.logos:before {
 
 @media screen and (max-width: 600px) {
   h2 {
-    margin-bottom: 35px;
-    font-size: 1.6rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .logos-container {
+    padding-bottom: 75px;
+  }
+
+  .logos-container img {
+    width: 100%
+  }
+
+  section.logos:before {
+    height: 35px;
+  }
+
+  section.websites, section.logos {
+    padding: 0px 0px;
+  }
+
+  section.websites .website-card {
+    height: 75vw;
+  }
+
+  section.logos {
+    padding-top: 20px;
   }
 
   .modal .modal-prev {
