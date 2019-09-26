@@ -558,4 +558,44 @@ footer img {
   .masthead .call-to-action-container {
     padding: 0;
   }
+
+  .testimonials .testimonial-card:before {
+    width: 75vw;
+    height: 100%;
+  }
+
+  .testimonials .testimonial-card {
+    height: auto;
+    width: 75vw;
+  }
+
+  .testimonials .testimonial-cards-container {
+    margin-top: 65px;
+  }
+
+  .testimonials .testimonial-card  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .testimonial-card blockquote {
+    padding-top: 0px
+  }
+
+  .testimonial-card blockquote:before {
+    font-size: 5.5rem;
+    top: -5px;
+    left: 0px;
+  }
+
+  .testimonial-card cite {
+    justify-content: center;
+    margin-right: 0px;
+  }
+
+  .testimonial-card cite img {
+    width: 40px;
+    margin-right: 5px;
+  }
 }
