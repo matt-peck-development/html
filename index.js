@@ -38,7 +38,12 @@ const closeModal = () => {
 };
 
 const loadImage = (src) => {
-  modalImg.src = src;
+  return new Promise((resolve, reject) => {
+    modalImg.onload = () => {
+      resolve();
+    };
+    modalImg.src = src;
+  });
 };
 
 const openModal = () => {
@@ -75,10 +80,10 @@ closeBtn.addEventListener('click', closeModal);
 websiteCards.forEach(c => {
     c.addEventListener('click', (e) => {
       selectedCardId = e.target.dataset.name;
-      console.log(selectedCardId)
-      loadImage(websitePics[selectedCardId][currentPictureIndex]);
-      updateControlVisibility();
-      openModal();
+      loadImage(websitePics[selectedCardId][currentPictureIndex]).then(() => {
+        updateControlVisibility();
+        openModal();
+      });
     });
   }
 );
@@ -90,7 +95,10 @@ prevBtn.addEventListener('click', () => {
   // 2. Update prev/next visibility
   updateControlVisibility();
   // 3. Render new picture
-  loadImage(websitePics[selectedCardId][currentPictureIndex]);
+  loadImage(websitePics[selectedCardId][currentPictureIndex]).then(() => {
+    updateControlVisibility();
+    openModal();
+  });
 });
 
 nextBtn.addEventListener('click', () => {
@@ -99,5 +107,8 @@ nextBtn.addEventListener('click', () => {
   // 2. Update prev/next visibility
   updateControlVisibility();
   // 3. Render new picture
-  loadImage(websitePics[selectedCardId][currentPictureIndex]);
+  loadImage(websitePics[selectedCardId][currentPictureIndex]).then(() => {
+    updateControlVisibility();
+    openModal();
+  });
 });
