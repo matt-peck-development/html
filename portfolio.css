@@ -331,15 +331,17 @@ section.logos:before {
     padding-top: 20px;
   }
 
+  .modal .modal-close {
+    top: -22px;
+    right: -22px;
+  }
+
   .modal .modal-prev {
-    /* display: none; */
-    margin-left: -36px;
+    margin-left: -38px;
   }
 
   .modal .modal-next {
-    /* display: none; */
-    /* margin-left: 15px; */
-    right: 5px;
+    right: 6px;
   }
 
 }
