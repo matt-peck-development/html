@@ -338,7 +338,8 @@ section.logos:before {
 
   .modal .modal-next {
     /* display: none; */
-    margin-left: 15px;
+    /* margin-left: 15px; */
+    right: 5px;
   }
 
 }
