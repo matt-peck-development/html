@@ -332,12 +332,12 @@ section.logos:before {
   }
 
   .modal .modal-prev {
-    display: none;
+    /* display: none; */
     margin-left: -36px;
   }
 
   .modal .modal-next {
-    display: none;
+    /* display: none; */
     margin-left: 15px;
   }
 
