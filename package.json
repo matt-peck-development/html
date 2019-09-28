@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "parcel index.html admin/*.html --open",
-    "build": "parcel build index.html admin/*.html --no-content-hash",
+    "build": "parcel build index.html admin/*.html admin/assets/** --no-content-hash",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
