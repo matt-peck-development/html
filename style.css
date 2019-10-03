@@ -94,10 +94,10 @@ nav ul li a.active {
   justify-content: center;
   align-items: center;
   padding-top: 150px;
-  opacity: 0;
-  animation: fade-in 1s;
+  /* opacity: 0; */
+  /* animation: fade-in 1s;
   animation-fill-mode: forwards;
-  animation-delay: .5s;
+  animation-delay: .5s; */
 }
 
 @keyframes fade-in {
