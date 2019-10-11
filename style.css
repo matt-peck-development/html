@@ -415,11 +415,9 @@ footer:before {
 
 footer img {
   display: block;
-  width: 75px;
-  background-color: #f3f3f3;
-  padding: 2px 3px;
-  border-radius: 3px;
-  margin-right: 20px;
+  width: 125px;
+  margin-right: 25px;
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 1300px) {
