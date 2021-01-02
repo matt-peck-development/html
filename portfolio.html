@@ -1,138 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
-  <link rel="manifest" href="./assets/site.webmanifest">
-  <link rel="mask-icon" href="./assets/safari-pinned-tab.svg" color="#f8f8f8">
-  <meta name="msapplication-TileColor" content="#f8f8f8">
-  <meta name="theme-color" content="#f8f8f8">
-  <link href="./style.css" rel="stylesheet" />
-  <link href="./portfolio.css" rel="stylesheet" />
-  <title>MPD | Portfolio</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/safari-pinned-tab.svg"
+      color="#f8f8f8"
+    />
+    <meta name="msapplication-TileColor" content="#f8f8f8" />
+    <meta name="theme-color" content="#f8f8f8" />
+    <link href="./style.css" rel="stylesheet" />
+    <link href="./portfolio.css" rel="stylesheet" />
+    <title>MPD | Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <input type="checkbox" id="toggle" />
+      <nav>
+        <ul>
+          <li>
+            <a href="/index.html">home</a>
+          </li>
+          <li>
+            <a href="/about.html">about</a>
+          </li>
+          <li>
+            <a class="active" href="/portfolio.html">portfolio</a>
+          </li>
+          <li>
+            <a class="is-button" href="/get-quote.html"
+              ><div class="btn-action btn-primary">get quote</div></a
+            >
+          </li>
+          <li>
+            <label for="toggle">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAAAXNSR0IArs4c6QAABBdJREFUWAnFmFFSGkEQhgGxUF/APFilVkpygnADNycIOYF4gJR4gmxOADlByAlcTxA8gfqcF6yUWuWDwItioZD/W2eoFZbNorJ21dA9vTPd/3T3DLObTj2DLi8vi8Ph8LOmlpkuuZBOp0tGPpHcQRZ5kg/X19dbfm+Gn3Tcse12u9Dr9fYEoqI5xbjzzLiWADaWlpZ+rK6uWtCRJmIBU4R2BoNBXcYLxlpXnGg0xVsLCwudtbW1E55dXV2VHh4eGEdUHfGyWl6NyHYymUxVEfxFP4oigZEyAToQgJIxciTZleFmlNHxZ7LjCJQr/TbPJJ8I4JeoFE8Fxsr7/f5vAWH1Z+KVWQEBIkgXFxdEr662RfQWFxc/2UgHxyGHAtMKK5r40ww+XF5ersStjXEH431q9fb2tiE9myelBe9qwfSjiUhpZUPTWN1cSPbr1g8+I51QU+fn5+15g7IgLDh84tvqJ7gGHBtQ3sTDOSnkz8MnvoMuMrZDXSnfhPSMmrL6eXPji81VAoP15wOjIHUs1FBqwKsVunUSxc2mqjIGDGBB9oHd3NxUBQjF0UuPBIzOShsbG57mHIEBLMzP8iPFjuEuPEj77t93d7m7d0HdS+XcXe665r6/HrNTV3/bYHGz7AadWUUpu2HR6ud6XzPDlKvnr0ay6crY96BBoqZNwF9dEUxZgSqbAYRzkgZprWz4Z/LBCzRDbIYSGHZ8TELZZLsGd0TolASUYACLmjc6LuS3lYDv/7mwGAqkMq+CY4JVIo8oweJPcX26v7/n9pHPClQJFCr81ghNQEiq+HHJTUNp5JQo+cdFAMekmGzxj/ynhbCl3pZQfpgWtdHoOQvcMpTKY6XylOJvGX9Fw9+MmSs5qewEUxkKLMniV0QsBh8Yh9q2wueIN9SeUJLFbzDgv8mu9KSoqflX3Seo6CRY/GAQHlL5+C/EBlDj9HcmgCWkkP8yGMCCS//kF9IGHfFv8DeiPfxaLD6wlZWVunT8szsgZ0CSZHw68tk1WB4jxi1Sea0aMKNbZBLgzI3V3p6roa+JeiHgL4E8HyQBCh/4wie+gz6Dt4uUXttJIymlEOvBgfOQjQ/fp/E93c3YC68f4umjn/9EoGpEihb2wuvfd8bNc2HT7rCfCDy9Yu2G5n58Yow+NaVPBNgmUpxZoZ8IQoExwfyhNiXm1Vpq++ZtRuLzSNEBDFkoqnWz2awz00cVTfJJkeMzFN/BPhpVU5Gsb25uHpp+LKbC5kSvarDDBNk4paaibjNTI4YBSya1dfWJHoY7Yp6MN8X5cNe1KyfSuiUwjkU54mWBKohDXQAKUMPvRfzEAsZ8asO8GFfU3UI3A51pMQ0Oz7i1GhtYEAQplqOydI5aQXLBplvyqWQiSmtK9qJSpjGh9A9B+2T7TdAtoAAAAABJRU5ErkJggg=="
+                alt=""
+              />
+            </label>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  <header>
-    <input type="checkbox" id="toggle">
-    <nav>
-      <ul>
-        <li>
-          <a href="/index.html">home</a>
-        </li>
-        <li>
-          <a href="/about.html">about</a>
-        </li>
-        <li>
-          <a class="active" href="/portfolio.html">portfolio</a>
-        </li>
-        <li>
-          <a class="is-button" href="/get-quote.html"><div class="btn-action btn-primary">get quote</div></a>
-        </li>
-        <li>
-          <label for="toggle">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAAAXNSR0IArs4c6QAABBdJREFUWAnFmFFSGkEQhgGxUF/APFilVkpygnADNycIOYF4gJR4gmxOADlByAlcTxA8gfqcF6yUWuWDwItioZD/W2eoFZbNorJ21dA9vTPd/3T3DLObTj2DLi8vi8Ph8LOmlpkuuZBOp0tGPpHcQRZ5kg/X19dbfm+Gn3Tcse12u9Dr9fYEoqI5xbjzzLiWADaWlpZ+rK6uWtCRJmIBU4R2BoNBXcYLxlpXnGg0xVsLCwudtbW1E55dXV2VHh4eGEdUHfGyWl6NyHYymUxVEfxFP4oigZEyAToQgJIxciTZleFmlNHxZ7LjCJQr/TbPJJ8I4JeoFE8Fxsr7/f5vAWH1Z+KVWQEBIkgXFxdEr662RfQWFxc/2UgHxyGHAtMKK5r40ww+XF5ersStjXEH431q9fb2tiE9myelBe9qwfSjiUhpZUPTWN1cSPbr1g8+I51QU+fn5+15g7IgLDh84tvqJ7gGHBtQ3sTDOSnkz8MnvoMuMrZDXSnfhPSMmrL6eXPji81VAoP15wOjIHUs1FBqwKsVunUSxc2mqjIGDGBB9oHd3NxUBQjF0UuPBIzOShsbG57mHIEBLMzP8iPFjuEuPEj77t93d7m7d0HdS+XcXe665r6/HrNTV3/bYHGz7AadWUUpu2HR6ud6XzPDlKvnr0ay6crY96BBoqZNwF9dEUxZgSqbAYRzkgZprWz4Z/LBCzRDbIYSGHZ8TELZZLsGd0TolASUYACLmjc6LuS3lYDv/7mwGAqkMq+CY4JVIo8oweJPcX26v7/n9pHPClQJFCr81ghNQEiq+HHJTUNp5JQo+cdFAMekmGzxj/ynhbCl3pZQfpgWtdHoOQvcMpTKY6XylOJvGX9Fw9+MmSs5qewEUxkKLMniV0QsBh8Yh9q2wueIN9SeUJLFbzDgv8mu9KSoqflX3Seo6CRY/GAQHlL5+C/EBlDj9HcmgCWkkP8yGMCCS//kF9IGHfFv8DeiPfxaLD6wlZWVunT8szsgZ0CSZHw68tk1WB4jxi1Sea0aMKNbZBLgzI3V3p6roa+JeiHgL4E8HyQBCh/4wie+gz6Dt4uUXttJIymlEOvBgfOQjQ/fp/E93c3YC68f4umjn/9EoGpEihb2wuvfd8bNc2HT7rCfCDy9Yu2G5n58Yow+NaVPBNgmUpxZoZ8IQoExwfyhNiXm1Vpq++ZtRuLzSNEBDFkoqnWz2awz00cVTfJJkeMzFN/BPhpVU5Gsb25uHpp+LKbC5kSvarDDBNk4paaibjNTI4YBSya1dfWJHoY7Yp6MN8X5cNe1KyfSuiUwjkU54mWBKohDXQAKUMPvRfzEAsZ8asO8GFfU3UI3A51pMQ0Oz7i1GhtYEAQplqOydI5aQXLBplvyqWQiSmtK9qJSpjGh9A9B+2T7TdAtoAAAAABJRU5ErkJggg==" alt="">
-          </label>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="page-header">
-    <div class="header-container">
-      <img src="./assets/logo.png" alt="logo" />
-      <h1 class="header">// Portfolio</h1>
-    </div>
-    <div class="page-description">
-      <p>We take pride in our work, from every detail of design to every line of code. Here is a selection of some of our
-      previous work:</p>
-    </div>
-  </div>
-
-  <div class="modal-container">
-  <div class="overlay"></div>
-    <div class="modal">
-      <img class="modal-close" src="./assets/modal-close-x.png" alt="close">
-      <img class="modal-prev" src="./assets/modal-prev-arrow.png" alt="prev">
-      <img id="modal-img" src="" alt="modal-image-box">
-      <img class="modal-next" src="./assets/modal-next-arrow.png" alt="next">
-    </div>
-  </div>
-
-  <section class="websites">
-    <h2>WEBSITES</h2>
-    <div class="websites-cards-container">
-
-      <div data-name="mpd" class="website-card-container">
-        <div data-name="mpd" class="website-card">
-          <div data-name="mpd" class="website-card-overlay">
-            <img data-name="mpd" src="./assets/expand-pic.png" alt="expand">
-            <span data-name="mpd">expand</span>
-          </div>
-          <div class="img-container"><img src="./assets/mpd-1.jpg" alt="home-page"></div>
-          <div class="img-container"><img src="./assets/mpd-2.jpg" alt="about-us-page"></div>
-          <div class="img-container"><img src="./assets/mpd-3.jpg" alt="get-quote-page"></div>
-        </div>
-        <h4>Matt Peck Development</h4>
-        <p><strong>Scope:</strong> Web Design / Web Development / Modern CI/CD</p>
-        <p><strong>Brief:</strong> Design a sharp and minimal site to showcase MPD work</p>
-        <p><strong>Technology:</strong> Adobe XD / Affinity Designer / HTML5 / CSS3</p>
+    <div class="page-header">
+      <div class="header-container">
+        <img src="./assets/logo.png" alt="logo" />
+        <h1 class="header">// Portfolio</h1>
       </div>
-
-      <div data-name="nsbc" class="website-card-container">
-        <div data-name="nsbc" class="website-card">
-          <div data-name="nsbc" class="website-card-overlay">
-            <img data-name="nsbc" src="./assets/expand-pic.png" alt="expand">
-            <span data-name="nsbc">expand</span>
-          </div>
-          <div class="img-container"><img src="./assets/nsbc-1.jpg" alt="home-page"></div>
-          <div class="img-container"><img src="./assets/nsbc-2.jpeg" alt="sermons-page"></div>
-          <div class="img-container"><img src="./assets/nsbc-3.jpeg" alt="about-us-page"></div>
-        </div>
-        <h4>North Stafford Baptist Church</h4>
-        <p><strong>Scope:</strong> Web Design / Web Development / Logo Design</p>
-        <p><strong>Brief:</strong> Redesign website and logo for a fresh and modern look</p>
-        <p><strong>Technology:</strong> WordPress / X Theme Design / Development</p>
+      <div class="page-description">
+        <p>
+          We take pride in our work, from every detail of design to every line
+          of code. Here is a selection of some of our previous work:
+        </p>
       </div>
+    </div>
 
-      <div data-name="fbcg" class="website-card-container">
-        <div data-name="fbcg" class="website-card">
-          <div data-name="fbcg" class="website-card-overlay">
-            <img data-name="fbcg" src="./assets/expand-pic.png" alt="expand">
-            <span data-name="fbcg">expand</span>
-          </div>
-          <div class="img-container"><img src="./assets/fbcg-1.jpg" alt="home-page"></div>
-          <div class="img-container"><img src="./assets/fbcg-2.jpg" alt="leadership-page"></div>
-        </div>
-        <h4>First Baptist Church Graceville</h4>
-        <p><strong>Scope:</strong> Web Design / Web Development</p>
-        <p><strong>Brief:</strong> Create a minimal website for content driven ministry</p>
-        <p><strong>Technology:</strong> WordPress / X Theme Design / Development</p>
+    <div class="modal-container">
+      <div class="overlay"></div>
+      <div class="modal">
+        <img class="modal-close" src="./assets/modal-close-x.png" alt="close" />
+        <img
+          class="modal-prev"
+          src="./assets/modal-prev-arrow.png"
+          alt="prev"
+        />
+        <img id="modal-img" src="" alt="modal-image-box" />
+        <img
+          class="modal-next"
+          src="./assets/modal-next-arrow.png"
+          alt="next"
+        />
       </div>
-
     </div>
-  </section>
 
-  <section class="logos">
-    <h2>LOGOS</h2>
-    <div class="logos-container">
-      <img src="./assets/village-youth-logo.png" alt="village-youth-logo">
-      <img src="./assets/nsbc-logo.png" alt="nsbc-logo">
-      <img src="./assets/foundation-logo.png" alt="foundation-logo">
-    </div>
-  </section>
+    <section class="websites">
+      <h2>WEBSITES</h2>
+      <div class="websites-cards-container">
+        <div data-name="mpd" class="website-card-container">
+          <div data-name="mpd" class="website-card">
+            <div data-name="mpd" class="website-card-overlay">
+              <img data-name="mpd" src="./assets/expand-pic.png" alt="expand" />
+              <span data-name="mpd">expand</span>
+            </div>
+            <div class="img-container">
+              <img src="./assets/mpd-1.jpg" alt="home-page" />
+            </div>
+            <div class="img-container">
+              <img src="./assets/mpd-2.jpg" alt="about-us-page" />
+            </div>
+            <div class="img-container">
+              <img src="./assets/mpd-3.jpg" alt="get-quote-page" />
+            </div>
+          </div>
+          <h4>Matt Peck Development</h4>
+          <p>
+            <strong>Scope:</strong> Web Design / Web Development / Modern CI/CD
+          </p>
+          <p>
+            <strong>Brief:</strong> Design a sharp and minimal site to showcase
+            MPD work
+          </p>
+          <p>
+            <strong>Technology:</strong> Adobe XD / Affinity Designer / HTML5 /
+            CSS3
+          </p>
+        </div>
 
-  <!-- <h2>APPS</h2> -->
+        <div data-name="nsbc" class="website-card-container">
+          <div data-name="nsbc" class="website-card">
+            <div data-name="nsbc" class="website-card-overlay">
+              <img
+                data-name="nsbc"
+                src="./assets/expand-pic.png"
+                alt="expand"
+              />
+              <span data-name="nsbc">expand</span>
+            </div>
+            <div class="img-container">
+              <img src="./assets/nsbc-1.jpg" alt="home-page" />
+            </div>
+            <div class="img-container">
+              <img src="./assets/nsbc-2.jpeg" alt="sermons-page" />
+            </div>
+            <div class="img-container">
+              <img src="./assets/nsbc-3.jpeg" alt="about-us-page" />
+            </div>
+          </div>
+          <h4>North Stafford Baptist Church</h4>
+          <p>
+            <strong>Scope:</strong> Web Design / Web Development / Logo Design
+          </p>
+          <p>
+            <strong>Brief:</strong> Redesign website and logo for a fresh and
+            modern look
+          </p>
+          <p>
+            <strong>Technology:</strong> WordPress / X Theme Design /
+            Development
+          </p>
+        </div>
 
-  <footer>
-    <img src="./assets/logo-dark-bg.png" alt="logo" />
-    <span>© 2019 Matt Peck Development, LLC. All rights reserved.</span>
-  </footer>
+        <div data-name="fbcg" class="website-card-container">
+          <div data-name="fbcg" class="website-card">
+            <div data-name="fbcg" class="website-card-overlay">
+              <img
+                data-name="fbcg"
+                src="./assets/expand-pic.png"
+                alt="expand"
+              />
+              <span data-name="fbcg">expand</span>
+            </div>
+            <div class="img-container">
+              <img src="./assets/fbcg-1.jpg" alt="home-page" />
+            </div>
+            <div class="img-container">
+              <img src="./assets/fbcg-2.jpg" alt="leadership-page" />
+            </div>
+          </div>
+          <h4>First Baptist Church Graceville</h4>
+          <p><strong>Scope:</strong> Web Design / Web Development</p>
+          <p>
+            <strong>Brief:</strong> Create a minimal website for content driven
+            ministry
+          </p>
+          <p>
+            <strong>Technology:</strong> WordPress / X Theme Design /
+            Development
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <script src="./index.js"></script>
-</body>
+    <section class="logos">
+      <h2>LOGOS</h2>
+      <div class="logos-container">
+        <img src="./assets/village-youth-logo.png" alt="village-youth-logo" />
+        <img src="./assets/nsbc-logo.png" alt="nsbc-logo" />
+        <img src="./assets/foundation-logo.png" alt="foundation-logo" />
+      </div>
+    </section>
+
+    <!-- <h2>APPS</h2> -->
+
+    <footer>
+      <img src="./assets/logo-dark-bg.png" alt="logo" />
+      <span>© 2021 Matt Peck Development, LLC. All rights reserved.</span>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
 </html>

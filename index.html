@@ -1,131 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
-  <link rel="manifest" href="./assets/site.webmanifest">
-  <link rel="mask-icon" href="./assets/safari-pinned-tab.svg" color="#f8f8f8">
-  <meta name="msapplication-TileColor" content="#f8f8f8">
-  <meta name="theme-color" content="#f8f8f8">
-  <link href="./style.css" rel="stylesheet" />
-  <title>MPD | Home</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/safari-pinned-tab.svg"
+      color="#f8f8f8"
+    />
+    <meta name="msapplication-TileColor" content="#f8f8f8" />
+    <meta name="theme-color" content="#f8f8f8" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>MPD | Home</title>
+  </head>
+  <body>
+    <header>
+      <input type="checkbox" id="toggle" />
+      <nav>
+        <ul>
+          <li>
+            <a class="active" href="/index.html">home</a>
+          </li>
+          <li>
+            <a href="/about.html">about</a>
+          </li>
+          <li>
+            <a href="/portfolio.html">portfolio</a>
+          </li>
+          <li>
+            <a class="is-button" href="/get-quote.html"
+              ><div class="btn-action btn-primary">get quote</div></a
+            >
+          </li>
+          <li>
+            <label for="toggle">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAAAXNSR0IArs4c6QAABBdJREFUWAnFmFFSGkEQhgGxUF/APFilVkpygnADNycIOYF4gJR4gmxOADlByAlcTxA8gfqcF6yUWuWDwItioZD/W2eoFZbNorJ21dA9vTPd/3T3DLObTj2DLi8vi8Ph8LOmlpkuuZBOp0tGPpHcQRZ5kg/X19dbfm+Gn3Tcse12u9Dr9fYEoqI5xbjzzLiWADaWlpZ+rK6uWtCRJmIBU4R2BoNBXcYLxlpXnGg0xVsLCwudtbW1E55dXV2VHh4eGEdUHfGyWl6NyHYymUxVEfxFP4oigZEyAToQgJIxciTZleFmlNHxZ7LjCJQr/TbPJJ8I4JeoFE8Fxsr7/f5vAWH1Z+KVWQEBIkgXFxdEr662RfQWFxc/2UgHxyGHAtMKK5r40ww+XF5ersStjXEH431q9fb2tiE9myelBe9qwfSjiUhpZUPTWN1cSPbr1g8+I51QU+fn5+15g7IgLDh84tvqJ7gGHBtQ3sTDOSnkz8MnvoMuMrZDXSnfhPSMmrL6eXPji81VAoP15wOjIHUs1FBqwKsVunUSxc2mqjIGDGBB9oHd3NxUBQjF0UuPBIzOShsbG57mHIEBLMzP8iPFjuEuPEj77t93d7m7d0HdS+XcXe665r6/HrNTV3/bYHGz7AadWUUpu2HR6ud6XzPDlKvnr0ay6crY96BBoqZNwF9dEUxZgSqbAYRzkgZprWz4Z/LBCzRDbIYSGHZ8TELZZLsGd0TolASUYACLmjc6LuS3lYDv/7mwGAqkMq+CY4JVIo8oweJPcX26v7/n9pHPClQJFCr81ghNQEiq+HHJTUNp5JQo+cdFAMekmGzxj/ynhbCl3pZQfpgWtdHoOQvcMpTKY6XylOJvGX9Fw9+MmSs5qewEUxkKLMniV0QsBh8Yh9q2wueIN9SeUJLFbzDgv8mu9KSoqflX3Seo6CRY/GAQHlL5+C/EBlDj9HcmgCWkkP8yGMCCS//kF9IGHfFv8DeiPfxaLD6wlZWVunT8szsgZ0CSZHw68tk1WB4jxi1Sea0aMKNbZBLgzI3V3p6roa+JeiHgL4E8HyQBCh/4wie+gz6Dt4uUXttJIymlEOvBgfOQjQ/fp/E93c3YC68f4umjn/9EoGpEihb2wuvfd8bNc2HT7rCfCDy9Yu2G5n58Yow+NaVPBNgmUpxZoZ8IQoExwfyhNiXm1Vpq++ZtRuLzSNEBDFkoqnWz2awz00cVTfJJkeMzFN/BPhpVU5Gsb25uHpp+LKbC5kSvarDDBNk4paaibjNTI4YBSya1dfWJHoY7Yp6MN8X5cNe1KyfSuiUwjkU54mWBKohDXQAKUMPvRfzEAsZ8asO8GFfU3UI3A51pMQ0Oz7i1GhtYEAQplqOydI5aQXLBplvyqWQiSmtK9qJSpjGh9A9B+2T7TdAtoAAAAABJRU5ErkJggg=="
+                alt=""
+              />
+            </label>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  <header>
-    <input type="checkbox" id="toggle">
-    <nav>
-      <ul>
-        <li>
-          <a class="active" href="/index.html">home</a>
-        </li>
-        <li>
-          <a href="/about.html">about</a>
-        </li>
-        <li>
-          <a href="/portfolio.html">portfolio</a>
-        </li>
-        <li>
-          <a class="is-button" href="/get-quote.html"><div class="btn-action btn-primary">get quote</div></a>
-        </li>
-        <li>
-          <label for="toggle">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAAAXNSR0IArs4c6QAABBdJREFUWAnFmFFSGkEQhgGxUF/APFilVkpygnADNycIOYF4gJR4gmxOADlByAlcTxA8gfqcF6yUWuWDwItioZD/W2eoFZbNorJ21dA9vTPd/3T3DLObTj2DLi8vi8Ph8LOmlpkuuZBOp0tGPpHcQRZ5kg/X19dbfm+Gn3Tcse12u9Dr9fYEoqI5xbjzzLiWADaWlpZ+rK6uWtCRJmIBU4R2BoNBXcYLxlpXnGg0xVsLCwudtbW1E55dXV2VHh4eGEdUHfGyWl6NyHYymUxVEfxFP4oigZEyAToQgJIxciTZleFmlNHxZ7LjCJQr/TbPJJ8I4JeoFE8Fxsr7/f5vAWH1Z+KVWQEBIkgXFxdEr662RfQWFxc/2UgHxyGHAtMKK5r40ww+XF5ersStjXEH431q9fb2tiE9myelBe9qwfSjiUhpZUPTWN1cSPbr1g8+I51QU+fn5+15g7IgLDh84tvqJ7gGHBtQ3sTDOSnkz8MnvoMuMrZDXSnfhPSMmrL6eXPji81VAoP15wOjIHUs1FBqwKsVunUSxc2mqjIGDGBB9oHd3NxUBQjF0UuPBIzOShsbG57mHIEBLMzP8iPFjuEuPEj77t93d7m7d0HdS+XcXe665r6/HrNTV3/bYHGz7AadWUUpu2HR6ud6XzPDlKvnr0ay6crY96BBoqZNwF9dEUxZgSqbAYRzkgZprWz4Z/LBCzRDbIYSGHZ8TELZZLsGd0TolASUYACLmjc6LuS3lYDv/7mwGAqkMq+CY4JVIo8oweJPcX26v7/n9pHPClQJFCr81ghNQEiq+HHJTUNp5JQo+cdFAMekmGzxj/ynhbCl3pZQfpgWtdHoOQvcMpTKY6XylOJvGX9Fw9+MmSs5qewEUxkKLMniV0QsBh8Yh9q2wueIN9SeUJLFbzDgv8mu9KSoqflX3Seo6CRY/GAQHlL5+C/EBlDj9HcmgCWkkP8yGMCCS//kF9IGHfFv8DeiPfxaLD6wlZWVunT8szsgZ0CSZHw68tk1WB4jxi1Sea0aMKNbZBLgzI3V3p6roa+JeiHgL4E8HyQBCh/4wie+gz6Dt4uUXttJIymlEOvBgfOQjQ/fp/E93c3YC68f4umjn/9EoGpEihb2wuvfd8bNc2HT7rCfCDy9Yu2G5n58Yow+NaVPBNgmUpxZoZ8IQoExwfyhNiXm1Vpq++ZtRuLzSNEBDFkoqnWz2awz00cVTfJJkeMzFN/BPhpVU5Gsb25uHpp+LKbC5kSvarDDBNk4paaibjNTI4YBSya1dfWJHoY7Yp6MN8X5cNe1KyfSuiUwjkU54mWBKohDXQAKUMPvRfzEAsZ8asO8GFfU3UI3A51pMQ0Oz7i1GhtYEAQplqOydI5aQXLBplvyqWQiSmtK9qJSpjGh9A9B+2T7TdAtoAAAAABJRU5ErkJggg==" alt="">
-          </label>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="masthead">
-    <div class="masthead-content">
-      <img src="./assets/logo.png" alt="logo" />
-      <h1 class="header">we design and build great looking websites</h1>
-      <div class="call-to-action-container">
-        <a href="/get-quote.html"><div class="btn-action btn-primary">get quote</div></a>
-        <a href="/portfolio.html"><div class="btn-action btn-info">see our work</div></a>
+    <div class="masthead">
+      <div class="masthead-content">
+        <img src="./assets/logo.png" alt="logo" />
+        <h1 class="header">we design and build great looking websites</h1>
+        <div class="call-to-action-container">
+          <a href="/get-quote.html"
+            ><div class="btn-action btn-primary">get quote</div></a
+          >
+          <a href="/portfolio.html"
+            ><div class="btn-action btn-info">see our work</div></a
+          >
+        </div>
       </div>
     </div>
-  </div>
 
-  <hr class="masthead-plate" />
+    <hr class="masthead-plate" />
 
-  <section class="pitch">
-    <article class="pitch-text">
-      <h3>Detail Focused</h3>
+    <section class="pitch">
+      <article class="pitch-text">
+        <h3>Detail Focused</h3>
         <span class="subtext">the small things matter</span>
 
-      <h3>Sharp Designs</h3>
+        <h3>Sharp Designs</h3>
         <span class="subtext">clean and elegant</span>
 
-      <h3>Intuitive UX</h3>
-        <span class="subtext">subtle, familiar, yet impressive</span>
-
-    </article>
-    <article class="pitch-video">
-      <img src="./assets/MacbookMockupDev.png" alt="computer">
-    </article>
-  </section>
-
-  <section class="core-values">
-    <div class="section-segway">more about our values</div>
-    <h2>At MPD, we share three core values</h2>
-    <div class="core-values-container">
-      <article>
-        <h3>Detail Focused</h3>
-        <p>We’re dedicated to every facet of your project, from design to development to implementation. We are meticulous about the small things, because we think they matter.</p>
-      </article>
-      <article>
-        <h3>Sharp Designs</h3>
-        <p>The better our designs look, the more professional you’ll look. We pride ourselves in creating clean and elegant designs that help your business stand out.</p>
-      </article>
-      <article>
         <h3>Intuitive UX</h3>
-        <p>Experience is everything. So we’ll make sure that every interaction with your website is smooth and intuitive and
-        creates a lasting impression with your clients.</p>
+        <span class="subtext">subtle, familiar, yet impressive</span>
       </article>
-    </div>
-    <a href="/portfolio.html"><div class="btn-action btn-info">see our work</div></a>
-  </section>
+      <article class="pitch-video">
+        <img src="./assets/MacbookMockupDev.png" alt="computer" />
+      </article>
+    </section>
 
-  <section class="testimonials">
-    <h2>What others are saying about MPD</h2>
-    <div class="testimonial-cards-container">
-      <div class="testimonial-card">
-        <!-- Matt has been a pleasure to work with. He snapped right into our culture with his transparent and collaborative
+    <section class="core-values">
+      <div class="section-segway">more about our values</div>
+      <h2>At MPD, we share three core values</h2>
+      <div class="core-values-container">
+        <article>
+          <h3>Detail Focused</h3>
+          <p>
+            We’re dedicated to every facet of your project, from design to
+            development to implementation. We are meticulous about the small
+            things, because we think they matter.
+          </p>
+        </article>
+        <article>
+          <h3>Sharp Designs</h3>
+          <p>
+            The better our designs look, the more professional you’ll look. We
+            pride ourselves in creating clean and elegant designs that help your
+            business stand out.
+          </p>
+        </article>
+        <article>
+          <h3>Intuitive UX</h3>
+          <p>
+            Experience is everything. So we’ll make sure that every interaction
+            with your website is smooth and intuitive and creates a lasting
+            impression with your clients.
+          </p>
+        </article>
+      </div>
+      <a href="/portfolio.html"
+        ><div class="btn-action btn-info">see our work</div></a
+      >
+    </section>
+
+    <section class="testimonials">
+      <h2>What others are saying about MPD</h2>
+      <div class="testimonial-cards-container">
+        <div class="testimonial-card">
+          <!-- Matt has been a pleasure to work with. He snapped right into our culture with his transparent and collaborative
         approach. He has been a great addition to our team -->
-        <blockquote>Matt gets the design and development relationship that makes for the best product output. He also has a natural sense of leadership and can step up when needed or dig into the details.</blockquote>
-        <cite>
-          <img src="./assets/masheen-logo.png" alt="masheen">
-          <div class="citation">
-            <strong>- Bill & Andrea Moschella</strong>
-            <br><span class="company">Masheen</span>
-          </div>
-
-        </cite>
+          <blockquote>
+            Matt gets the design and development relationship that makes for the
+            best product output. He also has a natural sense of leadership and
+            can step up when needed or dig into the details.
+          </blockquote>
+          <cite>
+            <img src="./assets/masheen-logo.png" alt="masheen" />
+            <div class="citation">
+              <strong>- Bill & Andrea Moschella</strong>
+              <br /><span class="company">Masheen</span>
+            </div>
+          </cite>
+        </div>
+        <div class="testimonial-card">
+          <blockquote>
+            MPD did a great job giving us a new website that looks clean and
+            modern. They responded to every request quickly and created exactly
+            what we wanted.
+          </blockquote>
+          <cite>
+            <img src="./assets/nsbc-logo.png" alt="masheen" />
+            <div class="citation">
+              <strong>- Darren King</strong>
+              <br /><span class="company">North Stafford Baptist Church</span>
+            </div>
+          </cite>
+        </div>
       </div>
-      <div class="testimonial-card">
-        <blockquote>MPD did a great job giving us a new website that looks clean and modern. They responded to every request quickly and
-        created exactly what we wanted.</blockquote>
-        <cite>
-          <img src="./assets/nsbc-logo.png" alt="masheen">
-          <div class="citation">
-            <strong>- Darren King</strong>
-            <br><span class="company">North Stafford Baptist Church</span>
-          </div>
+    </section>
 
-        </cite>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <img src="./assets/logo-dark-bg.png" alt="logo" />
-    <span>© 2019 Matt Peck Development, LLC. All rights reserved.</span>
-  </footer>
-</body>
+    <footer>
+      <img src="./assets/logo-dark-bg.png" alt="logo" />
+      <span>© 2021 Matt Peck Development, LLC. All rights reserved.</span>
+    </footer>
+  </body>
 </html>
