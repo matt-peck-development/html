@@ -572,6 +572,12 @@ footer img {
     padding: 0;
   }
 
+  .core-values-container img {
+    height: auto;
+    max-height: 75px;
+    max-width: 90%;
+  }
+
   .testimonials .testimonial-card:before {
     width: 75vw;
     height: 100%;
