@@ -1,13 +1,15 @@
- @import "./variables.css";
+@import "./variables.css";
 
- html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   background-color: rgba(240, 240, 240);
-  font-family: 'Avenir', sans-serif;
+  font-family: "Avenir", sans-serif;
   font-size: 16px;
   background-color: #f3f3f3;
-  background: transparent url('./assets/vintage_speckles.png') 0% 0% repeat padding-box;
+  background: transparent url("./assets/vintage_speckles.png") 0% 0% repeat
+    padding-box;
 }
 
 * {
@@ -36,7 +38,7 @@ header label {
   cursor: pointer;
 }
 header label img {
-  transition: transform .5s linear;
+  transition: transform 0.5s linear;
 }
 
 /* header input:checked + nav {
@@ -44,7 +46,7 @@ header label img {
 } */
 
 header nav {
-  background-color: #3B3B3B;
+  background-color: #3b3b3b;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -76,10 +78,10 @@ nav ul li .btn-action {
 nav ul li a {
   display: block;
   text-decoration: none;
-  color: #F3F3F3;
+  color: #f3f3f3;
   font-size: 1.25rem;
   border-bottom: 3px solid transparent;
-  transition: border-bottom .2s linear;
+  transition: border-bottom 0.2s linear;
 }
 
 nav ul li a:not(.is-button):hover {
@@ -87,7 +89,7 @@ nav ul li a:not(.is-button):hover {
 }
 
 nav ul li a.active {
- font-weight: 600;
+  font-weight: 600;
 }
 .masthead {
   display: flex;
@@ -101,19 +103,24 @@ nav ul li a.active {
 }
 
 @keyframes fade-in {
-  0% { opacity: 0; top: 150px; }
-  100% { opacity: 1; top: 0px; }
+  0% {
+    opacity: 0;
+    top: 150px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
 }
 
 .masthead-content {
-
 }
 
 .masthead img {
   display: block;
   margin: 0 auto;
   width: 450px;
-  margin-bottom: 30px
+  margin-bottom: 30px;
 }
 
 .masthead .header {
@@ -122,7 +129,7 @@ nav ul li a.active {
   font-weight: 500;
   margin-bottom: 25px;
   font-size: 1.8rem;
-  color: #3B3B3B;
+  color: #3b3b3b;
 }
 
 .masthead .call-to-action-container {
@@ -130,7 +137,7 @@ nav ul li a.active {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  margin-bottom: 100px
+  margin-bottom: 100px;
 }
 
 .btn-action {
@@ -141,13 +148,13 @@ nav ul li a.active {
   margin: 0 15px;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
 .btn-primary {
-  color: #F2F2F2;
-  background-color: #6C86DB;
+  color: #f2f2f2;
+  background-color: #6c86db;
   border: 2px solid transparent;
 }
 
@@ -156,7 +163,7 @@ a{
 }
 
 .btn-info {
-  color: #6C86DB;
+  color: #6c86db;
   border: 2px solid #707070;
   background-color: #f3f3f3;
 }
@@ -180,7 +187,7 @@ h2 {
   padding: 0;
   margin-bottom: 25px;
   font-size: 1.5rem;
-  color: #3B3B3B;
+  color: #3b3b3b;
 }
 
 section.pitch {
@@ -206,7 +213,7 @@ h3 {
   margin: 0;
   margin-bottom: 5px;
   font-weight: 500;
-  color: #3B3B3B;
+  color: #3b3b3b;
 }
 
 .pitch-text .subtext {
@@ -233,20 +240,20 @@ section.core-values {
   z-index: 1;
   padding-top: 40px;
   padding-bottom: 125px;
-  background-color: #C9C9C9;
+  background-color: #c9c9c9;
   /* background: transparent url('./assets/vintage_speckles.png') 0% 0% repeat padding-box; */
 }
 
 section.core-values:before {
   background: inherit;
   top: -21px;
-  content: '';
+  content: "";
   display: block;
   height: 100px;
   left: 0;
   position: absolute;
   right: 0;
-  transform: skewY(-.7deg);
+  transform: skewY(-0.7deg);
   transform-origin: 100%;
   z-index: -1;
 }
@@ -258,30 +265,38 @@ section.core-values .section-segway {
   font-weight: 500;
   margin: 0 auto;
   letter-spacing: 0;
-  color: #E5E5E5;
-  background-color: #6C86DB;
+  color: #e5e5e5;
+  background-color: #6c86db;
   width: 330px;
   height: 39px;
   line-height: 39px;
   box-shadow: 0px 6px 8px #00000029;
 }
+.core-values h2 {
+  padding: 0 50px;
+}
 .core-values-container {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 0 150px;
+  padding: 0 100px;
   padding-top: 40px;
 }
 
-.core-values-container article {
-  margin: 0 50px;
-  margin-bottom: 50px;
-  font-size: 1.1rem;
-  font-weight: 300;
+.core-values-container img {
+  margin: 25px 40px;
+  height: 75px;
+  border-radius: 6px;
+}
+
+.core-values-container img.bigger {
+  height: 100px;
 }
 
 section.core-values .btn-info {
-  color: #6C86DB;
+  color: #6c86db;
   border: 2px solid #707070;
   background-color: transparent;
   width: 175px;
@@ -293,19 +308,19 @@ section.testimonials {
   z-index: 1;
   padding-top: 20px;
   padding-bottom: 125px;
-  background-color: #E4E4E4;
+  background-color: #e4e4e4;
   /* background: transparent url('./assets/vintage_speckles.png') 0% 0% repeat padding-box; */
 }
 section.testimonials:before {
   background: inherit;
   top: -21px;
-  content: '';
+  content: "";
   display: block;
   height: 100px;
   left: 0;
   position: absolute;
   right: 0;
-  transform: skewY(.9deg);
+  transform: skewY(0.9deg);
   transform-origin: 100%;
   z-index: -1;
 }
@@ -332,7 +347,7 @@ section.testimonials:before {
   position: absolute;
   top: -25px;
   left: -25px;
-  content: '';
+  content: "";
   display: block;
   height: 400px;
   width: 400px;
@@ -343,15 +358,15 @@ section.testimonials:before {
 }
 
 .testimonial-card blockquote {
-  color: #E6E6E6;
+  color: #e6e6e6;
   padding-top: 65px;
   font-weight: 500;
   font-size: 1.2rem;
   font-style: italic;
 }
 .testimonial-card blockquote:before {
-  content: '“';
-  color: #E6E6E6;
+  content: "“";
+  color: #e6e6e6;
   font-family: Copperplate;
   font-size: 7.5em;
   font-weight: 700;
@@ -366,7 +381,7 @@ section.testimonials:before {
   align-items: center;
   justify-content: flex-end;
   margin-right: 20px;
-  color: #E6E6E6;
+  color: #e6e6e6;
   text-align: right;
   font-weight: 500;
   font-size: 1.2rem;
@@ -388,13 +403,12 @@ section.testimonials:before {
   font-size: 1.1rem;
 }
 
-
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100px;
-  background-color: #3B3B3B;
+  background-color: #3b3b3b;
   position: relative;
   z-index: 1;
   color: #f3f3f3;
@@ -402,7 +416,7 @@ footer {
 footer:before {
   background: inherit;
   top: -45px;
-  content: '';
+  content: "";
   display: block;
   height: 100px;
   left: 0;
@@ -456,7 +470,8 @@ footer img {
 }
 
 @media screen and (max-width: 750px) {
-  html, body {
+  html,
+  body {
     font-size: 14px;
   }
   nav ul li a {
@@ -485,7 +500,9 @@ footer img {
     margin-bottom: 0px;
   }
 
-  .masthead-plate, section.pitch, section.core-values .section-segway {
+  .masthead-plate,
+  section.pitch,
+  section.core-values .section-segway {
     display: none;
   }
 
@@ -495,14 +512,15 @@ footer img {
 }
 
 @media screen and (max-width: 600px) {
-  html, body {
+  html,
+  body {
     font-size: 13px;
   }
 
   header nav {
     position: static;
     height: 55px;
-    transition: height .5s linear;
+    transition: height 0.5s linear;
   }
 
   header label {
@@ -513,7 +531,7 @@ footer img {
     height: 255px;
   }
 
-   header input:checked ~ nav ul {
+  header input:checked ~ nav ul {
     height: 255px;
     top: 0px;
   }
@@ -523,7 +541,7 @@ footer img {
     top: -175px;
     flex-direction: column;
     margin: 0;
-    transition: top .5s linear;
+    transition: top 0.5s linear;
   }
 
   nav ul li {
@@ -541,7 +559,6 @@ footer img {
   }
 
   .masthead-content {
-
   }
 
   .masthead img {
@@ -571,14 +588,14 @@ footer img {
     margin-top: 65px;
   }
 
-  .testimonials .testimonial-card  {
+  .testimonials .testimonial-card {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
 
   .testimonial-card blockquote {
-    padding-top: 0px
+    padding-top: 0px;
   }
 
   .testimonial-card blockquote:before {
