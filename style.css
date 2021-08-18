@@ -451,7 +451,6 @@ footer img {
 
 @media screen and (max-width: 1050px) {
   .core-values-container {
-    flex-direction: column;
     padding: 0 18%;
   }
 
@@ -501,8 +500,7 @@ footer img {
   }
 
   .masthead-plate,
-  section.pitch,
-  section.core-values .section-segway {
+  section.pitch {
     display: none;
   }
 
@@ -538,7 +536,7 @@ footer img {
 
   nav ul {
     position: relative;
-    top: -175px;
+    top: -132px;
     flex-direction: column;
     margin: 0;
     transition: top 0.5s linear;
