@@ -68,15 +68,49 @@
         <h1 class="header">// Get Quote</h1>
       </div>
       <div class="form-success-container">
-        <p>Thanks for reaching out, we'll be in touch soon!</p>
+        <p>
+          <span id="countdown-placeholder"></span>
+          <span id="img-placeholder"></span>
+          Thanks for reaching out, we'll be in touch soon!
+        </p>
       </div>
     </div>
 
     <section class="testimonials"></section>
 
     <footer>
-      <img src="./assets/logo.png" alt="logo" />
+      <img src="./assets/logo-dark-bg.png" alt="logo" />
       <span>© 2021 Matt Peck Development, LLC. All rights reserved.</span>
     </footer>
+
+    <script type="text/javascript">
+      const imgPlaceholder = document.querySelector("#img-placeholder");
+      const countdownPlaceholder = document.querySelector(
+        "#countdown-placeholder"
+      );
+      const isDirtbag = window.localStorage.getItem("mpd:dirtbag");
+      let secondsLeft = 500;
+      countdownPlaceholder.textContent = `Taking you to where you belong in ${secondsLeft}`;
+
+      if (isDirtbag) {
+        const img = document.createElement("img");
+        img.src =
+          "https://media4.giphy.com/media/WdxgDkavCuY56Of9jq/giphy.gif?cid=ecf05e473mfhgistcm2tz25li16m8qcykm78urw612fq0x7f&rid=giphy.gif&ct=g";
+        img.alt = "Dirtbag!";
+
+        imgPlaceholder.appendChild(img);
+
+        setInterval(() => {
+          secondsLeft = secondsLeft === 0 ? 0 : secondsLeft - 10;
+          countdownPlaceholder.textContent = `Taking you to where you belong in ${secondsLeft}`;
+        }, 100);
+
+        setTimeout(() => {
+          window.location.assign(
+            "https://www.letmegooglethat.com/?q=How+did+Matt+become+an+amazing+detective%2Fgenius"
+          );
+        }, 5000);
+      }
+    </script>
   </body>
 </html>

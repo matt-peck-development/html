@@ -10,8 +10,8 @@
     "parcel-plugin-imagemin": "^3.0.0"
   },
   "scripts": {
-    "start": "parcel index.html admin/*.html admin/assets/** --open",
-    "build": "parcel build index.html admin/*.html admin/assets/** --no-content-hash",
+    "start": "parcel index.html get-quote-success.html admin/*.html admin/assets/** --open",
+    "build": "parcel build index.html get-quote-success.html admin/*.html admin/assets/** --no-content-hash",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

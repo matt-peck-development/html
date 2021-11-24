@@ -75,6 +75,7 @@
 
         <form
           name="MPD - Get Quote"
+          id="form"
           action="/get-quote-success"
           method="POST"
           data-netlify-recaptcha="true"
@@ -108,7 +109,7 @@
             class="hidden"
           />
           <div data-netlify-recaptcha="true"></div>
-          <input type="submit" value="SEND" />
+          <input id="submit" name="submit" type="submit" value="SEND" />
         </form>
       </div>
     </div>
@@ -119,5 +120,31 @@
       <img src="./assets/logo-dark-bg.png" alt="logo" />
       <span>© 2021 Matt Peck Development, LLC. All rights reserved.</span>
     </footer>
+
+    <script type="text/javascript">
+      const message = document.querySelector("#message");
+      const submit = document.querySelector("#submit");
+      const form = document.querySelector("#form");
+
+      const watchMessageChange = (e) => {
+        const { value } = e.target;
+        const containsMockery = value.toLowerCase().includes("pecker");
+        if (containsMockery) {
+          window.localStorage.setItem("mpd:dirtbag", true);
+        }
+      };
+
+      const handleFormSubmit = (e) => {
+        const isDirtbag = window.localStorage.getItem("mpd:dirtbag");
+
+        if (isDirtbag) {
+          e.preventDefault();
+          window.location.assign("/get-quote-success.html");
+        }
+      };
+
+      message.addEventListener("input", watchMessageChange, false);
+      submit.addEventListener("click", handleFormSubmit, false);
+    </script>
   </body>
 </html>
