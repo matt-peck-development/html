@@ -90,9 +90,10 @@
       );
       const isDirtbag = window.localStorage.getItem("mpd:dirtbag");
       let secondsLeft = 500;
-      countdownPlaceholder.textContent = `Taking you to where you belong in ${secondsLeft}`;
 
       if (isDirtbag) {
+        countdownPlaceholder.textContent = `Taking you to where you belong in ${secondsLeft}`;
+
         const img = document.createElement("img");
         img.src =
           "https://media4.giphy.com/media/WdxgDkavCuY56Of9jq/giphy.gif?cid=ecf05e473mfhgistcm2tz25li16m8qcykm78urw612fq0x7f&rid=giphy.gif&ct=g";
